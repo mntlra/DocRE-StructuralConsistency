@@ -4,7 +4,7 @@ This repository contains the code to perfom a structural consistency analysis of
 
 The structural consistency analysis can be performed in any DocRE dataset formatted as DocRED (package `dataset_quality`) and in model predictions formatted as DocRED official results (package `predictions_quality`).
 
-We also share the code to correct datasets containing syntactic noise (package `dataset_correction`). 
+We also share the code to correct datasets containing structural inconsistencies (package `dataset_correction`). 
 
 ## Structural inconsistencies
 We share the ontoogy-driven structural inconsistencies defined for DocRED in `data/rules`. 
@@ -37,10 +37,10 @@ The file `data/rules/max_cardinality.json` contains the maximum cardinality of a
 
 Example: "P571": 2 => The relation P571 (inception) has maximum cardinality 2.
 
-## Quality Analysis of DocRE Datasets
-To perform a quality analysis any DocRE dataset, run the script `src/main_correct_dataset.py`. The script takes as input the path to the dataset (must be in DocRED format).
+## Consistency Analysis of DocRE Datasets
+To perform a consistency analysis any DocRE dataset, run the script `src/main_correct_dataset.py`. The script takes as input the path to the dataset (must be in DocRED format).
 
-To check the syntactic quality of the DocRED distant dataset:
+To check the consistency of the DocRED distant dataset:
 1. Download the DocRED distant dataset from https://github.com/thunlp/DocRED/tree/master and place it in `data/datasets`
 2. Change the directory to src:
 ````
@@ -67,8 +67,8 @@ python main_correct_dataset.py --data_path="../data/datasets/train_distant.json"
 ````
 This script generates the corrected DocRED distant exploited for the experimental results in Table 2 and 3.
 
-## Predictions Syntactic Analysis
-To perform a quality analysis of any DocRE model's predictions, run the script `src/main_predictions_quality.py`. The script takes as input the path to the predictions file (must be in the DocRED official results format) and the evaluation datasets of the predictions.
+## Predictions Consistency Analysis
+To perform a consistency analysis of any DocRE model's predictions, run the script `src/main_predictions_quality.py`. The script takes as input the path to the predictions file (must be in the DocRED official results format) and the evaluation datasets of the predictions.
 
 ### Usage example
 To check the structurual consistency of the predictions of a model on the Re-DocRED test dataset:
@@ -82,4 +82,4 @@ cd src/
 ````
 python predictions_quality/main_predictions_quality.py --data_path="../data/datasets/test_revised.json" --preds_path="../data/preds/results_test_revised.json"
 ````
-This script generates the quality analysis reported in Table 2.
+This script generates the consistency analysis reported in Table 2.
