@@ -1,6 +1,6 @@
 # Ontology-Driven Structural Regularization for Document-Level Relation Extraction
 
-This repository contains the code to perfom a structural consistency analysis of DocRE datasets. The analysis is based on the presence of invalid triples (violating the domain and range constraint of a specific relation), missing inverse triples, invalid symmetric triples (presence of symmetric triples when the relation is asymmetric), and maximum cardinality violations. 
+This repository contains the code to perfom a structural consistency analysis of DocRE datasets. The analysis is based on the presence of invalid triples (violating the domain and range constraint of a specific relation), missing inverse triples, invalid symmetric triples (presence of symmetric triples when the relation is asymmetric), and maximum cardinality violations. (paper accepted at EMNLP 2026 main conference. Pre-print: https://arxiv.org/abs/2608.20856)
 
 The structural consistency analysis can be performed in any DocRE dataset formatted as DocRED (package `dataset_quality`) and in model predictions formatted as DocRED official results (package `predictions_quality`).
 
