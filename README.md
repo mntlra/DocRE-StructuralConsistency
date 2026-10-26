@@ -1,10 +1,35 @@
 # Ontology-Driven Structural Regularization for Document-Level Relation Extraction
 
-This repository contains the code to perfom a structural consistency analysis of DocRE datasets. The analysis is based on the presence of invalid triples (violating the domain and range constraint of a specific relation), missing inverse triples, invalid symmetric triples (presence of symmetric triples when the relation is asymmetric), and maximum cardinality violations. (paper accepted at EMNLP 2026 main conference. Pre-print: https://arxiv.org/abs/2608.20856)
+This repository contains the code to perfom a structural consistency analysis of DocRE datasets. The analysis is based on the presence of invalid triples (violating the domain and range constraint of a specific relation), missing inverse triples, invalid symmetric triples (presence of symmetric triples when the relation is asymmetric), and maximum cardinality violations.
 
 The structural consistency analysis can be performed in any DocRE dataset formatted as DocRED (package `dataset_quality`) and in model predictions formatted as DocRED official results (package `predictions_quality`).
 
 We also share the code to correct datasets containing structural inconsistencies (package `dataset_correction`). 
+
+## Reference
+
+If you use this code in your work, please kindly cite the following paper:
+
+```bibtex
+@inproceedings{menotti_etal-2026,
+    title = "Ontology-Driven Structural Regularization for Document-Level Relation Extraction",
+    author = "Menotti, Laura  and
+      Marchesin, Stefano  and
+      Silvello, Gianmaria",
+    editor = "Lee, Hung-Yi  and
+      Dev, Sunipa  and
+      Li, Jessy  and
+      Elliott, Desmond",
+    booktitle = "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+    month = oct,
+    year = "2026",
+    address = "Budapest, Hungary",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.emnlp-main.35/",
+    pages = "756--773",
+    ISBN = "979-8-89176-459-0"
+}
+```
 
 ## Structural inconsistencies
 We share the ontoogy-driven structural inconsistencies defined for DocRED in `data/rules`. 
