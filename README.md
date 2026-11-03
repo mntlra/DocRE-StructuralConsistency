@@ -14,6 +14,8 @@ We also share the code to correct datasets containing structural inconsistencies
 
 ## Reference
 
+**Contact for misuse or vulnerability reports.** Laura Menotti, laura.menotti@unipd.it
+
 If you use this code in your work, please kindly cite the following paper:
 
 ```bibtex
